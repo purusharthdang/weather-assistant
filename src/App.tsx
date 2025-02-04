@@ -8,7 +8,7 @@ import { ErrorMessage } from './components/ErrorMessage';
 import { WeatherProvider, useWeather } from './context/WeatherContext';
 import type { WeatherData, ForecastData } from './types/weather';
 
-const API_KEY = 'd62f51f9cbd5af93a3eba6507b7e123f';
+const API_KEY = import.meta.env.VITE_APP_OPENWEATHER_API_KEY;
 const REFRESH_INTERVAL = 30000;
 
 const fetcher = async (url: string) => {
